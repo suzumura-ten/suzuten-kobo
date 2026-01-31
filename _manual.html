@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>シンプルで汎用的なレイアウトの無料ホームページテンプレート tp_grid1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="あなたのサイト名"></a></h1>
+<ul id="nav">
+<li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Online Shop</a></li>
+</ul>
+</header>
+
+<!--開閉メニュー-->
+<div id="menubar">
+
+<nav>
+<ul>
+<li><a href="index.html">ホーム</a></li>
+<li><a href="list.html">商品一覧</a></li>
+<li><a href="contact.html">お問い合わせ</a></li>
+</ul>
+</nav>
+
+</div>
+
+<main>
+
+<section>
+
+<h2>当テンプレートの使い方</h2>
+
+<p><strong class="color-check">titleタグの設定はとても重要です。念入りにワードを選んで適切に入力しましょう。</strong><br>
+まず、htmlソースが見れる状態にして、<br>
+<span class="look">&lt;title&gt;シンプルで汎用的なレイアウトの無料ホームページテンプレート tp_grid1&lt;/title&gt;</span><br>
+を編集しましょう。<br>
+あなたのホームページ名が「Croissant」だとすれば、<br>
+<span class="look">&lt;title&gt;Croissant&lt;/title&gt;</span><br>
+とすればＯＫです。SEO対策もするなら冒頭に重要なワードを入れておきましょう。</p>
+<p><strong class="color-check">copyrightを変更しましょう。</strong><br>
+続いてhtmlの下の方にある、<br>
+<span class="look">Copyright&copy; あなたのサイト名 All Rights Reserved.</span><br>
+の部分もあなたのサイト名に変更します。</p>
+<p><strong class="color-check">metaタグを変更しましょう。</strong><br>
+htmlソースが見える状態にしてmetaタグを変更しましょう。</p>
+<p>ソースの上の方に、<br>
+<span class="look">content=&quot;ここにサイト説明を入れます&quot;</span><br>
+という部分がありますので、テキストをサイトの説明文に入れ替えます。検索結果の文面に使われる場合もありますので、見た人が来訪したくなるような説明文を簡潔に書きましょう。</p>
+<p><strong class="color-check">h1ロゴのaltタグも変更しましょう。</strong><br>
+html側に、<br>
+<span class="look">alt=&quot;あなたのサイト名&quot;</span><br>
+となっている箇所があるので、この部分もあなたのサイト名に変更しましょう。</p>
+
+</section>
+
+<section>
+
+<h2>アイコン画像について（Font Awesomeの解説）</h2>
+<p>imagesフォルダに入っていない画像（アイコン）は全てFont Awesomeの素材です。<br>
+<a href="https://fontawesome.com/" target="_blank">Font Awesome 公式サイト</a><br>
+<a href="https://fontawesome.com/v6/search" target="_blank">Font Awesome アイコン一覧</a></p>
+<p>iタグを使ってhtmlに直接アイコンを読み込む場合と、cssの擬似要素を使って読み込む場合があります。<br>
+それぞれ他のアイコンに置き換えたい場合は、当サイトの<a href="https://template-party.com/tips/tips20211126_font_awesome.html">マニュアル</a>をお読み下さい。</p>
+<p><strong class="color-check">Font Awesomeを使う為に必要なタグ、ファイル類。</strong><br>
+cssフォルダのstyle.css冒頭で読み込んでいる「Font Awesomeの読み込み」のブロック。</p>
+<p><strong class="color-check">何年も経過した場合、動作に問題が出てくる可能性があります。</strong><br>
+テンプレートを編集していないのに突然動きがおかしくなった場合は、style.cssの冒頭でCDNから読み込んでいるFont Awesome関連のファイルのバージョンを変更して動作するか確認してみて下さい。</p>
+
+</section>
+
+<section>
+
+<h2>メニューについて</h2>
+<p>メインメニューは開閉ブロックタイプになります。<br>
+もし大きな端末でメインメニューを表示させておきたい場合は、jsフォルダのmain.jsの冒頭にある、<br>
+<span class="look">const breakPoint = <span class="color-check">9999</span>;	// ここがブレイクポイント指定箇所です</span><br>
+の、<span class="color-check">9999</span>の数値を小さくして下さい。<br>
+※メインメニューのcssは設定されていないので、ご自身で設定して下さい。
+</p>
+<p>動作確認の際にあまりに素早い動作をされるとスクリプトが追いつかない場合があります。特にweb業者様など慣れている環境でテストされる際は、あくまで通常ユーザーの速度で試して下さい。</p>
+
+</section>
+
+<section>
+
+<h2>ul、ol要素</h2>
+
+<ol>
+<li>これはol要素です。サンプルテキスト。</li>
+<li>これはol要素です。サンプルテキスト。</li>
+<li>これはol要素です。サンプルテキスト。</li>
+</ol>
+
+<ul>
+<li>これはul要素です。サンプルテキスト。</li>
+<li>これはul要素です。サンプルテキスト。</li>
+<li>これはul要素です。サンプルテキスト。</li>
+</ul>
+
+</section>
+
+<section>
+
+<h2>サムネイル横スライドショー</h2>
+<p>右から左（rtl）、左から右（ltr）への２タイプ使えます。</p>
+
+<div class="slide-thumbnail1">
+<div class="img rtl">
+<div><a href="#"><img src="images/sample1.jpg" alt=""></a></div>
+<div><a href="#"><img src="images/sample2.jpg" alt=""></a></div>
+<div><a href="#"><img src="images/sample3.jpg" alt=""></a></div>
+<div><a href="#"><img src="images/sample1.jpg" alt=""></a></div>
+<div><a href="#"><img src="images/sample2.jpg" alt=""></a></div>
+<div><a href="#"><img src="images/sample3.jpg" alt=""></a></div>
+</div>
+</div>
+
+<div class="slide-thumbnail1">
+<div class="img ltr">
+<div><a href="#"><img src="images/sample1.jpg" alt=""></a></div>
+<div><a href="#"><img src="images/sample2.jpg" alt=""></a></div>
+<div><a href="#"><img src="images/sample3.jpg" alt=""></a></div>
+<div><a href="#"><img src="images/sample1.jpg" alt=""></a></div>
+<div><a href="#"><img src="images/sample2.jpg" alt=""></a></div>
+<div><a href="#"><img src="images/sample3.jpg" alt=""></a></div>
+</div>
+</div>
+
+</section>
+
+<section>
+
+<h2>背景画像がスライドアップするボックス</h2>
+<p>画像は縦長のものを準備して下さい。横長だと動きません。</p>
+
+<div class="bg-slideup">
+</div>
+
+</section>
+
+<section>
+
+<h2>イラスト素材入れてます</h2>
+<p>imagesフォルダ内に、ポイントで使えるイラスト集（illust.aiとillust.png）を梱包しています。自由にご活用下さい。</p>
+<p style="background: #fff;"><img src="images/illust.png" alt=""></p>
+
+</section>
+
+<section class="bg1">
+
+<h2>grid-boxレイアウトの解説</h2>
+<p>色々なgridレイアウトを使う場合、必ず外枠に <span class="look">&lt;div class=&quot;grid-box&quot;&gt;</span> を入れて、その中に <span class="look">article</span> を入れて下さい。<br>
+articleの中に、写真やテキストをセットします。</p>
+
+<h2>このテンプレでは12個のマスを設定しています</h2>
+<p><img src="images/grid.png" alt="" width="700"><br>
+cssフォルダのstyle.cssの <span class="look">grid-template-columns: repeat(<span class="color-check">12</span>, 1fr);</span>という行です。</p>
+
+<br>
+
+<div class="grid-box">
+
+<article>
+
+	<div class="image image-01 up">
+	<img src="images/sample1.jpg" alt="">
+	</div>
+
+	<div class="text text-01 up">
+	<h4>image-01と、text-01</h4>
+	<p>画像が右側に配置、テキストは左側に配置されます。<br>
+	※小さな端末ではhtml順のままで表示されます。</p>
+	<p>style.cssでimage-01（主に画像用）を検索すると、<span class="color-check">grid-column: 8 / 12;</span>という箇所が出てきます。これは、8番目〜12番目のラインの間のマスを占める指定です。<br>
+	<img src="images/grid1.png" alt="" width="700"></p>
+	<p>すぐ下にあるtext-01（主にテキスト用）は、<span class="color-check">grid-column: 2 / 8;</span>と書いてあるので、以下です。<br>
+	<img src="images/grid2.png" alt="" width="700"></p>
+	</div>
+
+</article>
+
+<article class="reverse">
+
+	<div class="image image-01 up">
+	<img src="images/sample1.jpg" alt="">
+	</div>
+
+	<div class="text text-01 up">
+	<h4>reverse</h4>
+	<p>外側のarticleに<span class="color-check">class=&quot;reverse&quot;</span>を追加すると、このように配置が逆になります。<br>
+	※小さな端末ではhtml順のままで表示されます。</p>
+	<h4>見出し左上の装飾イラスト</h4>
+	<p><span class="color-check">class=&quot;kazari&quot;</span>をつけてimgを配置するとこのようになります。配置場所は直接html側のインラインスタイル（style=&quot;〜〜&quot;）に記載して下さい。基準点はtopかleftを使います。ここではtextブロックに入れていますが、imageブロックに入れてもOKです。</p>
+	<img src="images/illust1.png" alt="" class="kazari" style="top: 0%; left: 0%;">
+	</div>
+
+</article>
+
+<article>
+
+	<div class="image image-02 up">
+	<img src="images/sample5.jpg" alt="">
+	</div>
+
+	<div class="text text-02 up">
+	<h4>image-02と、text-02</h4>
+	<p>画像が左側に配置、テキストは画像の下に配置されます。<br>
+	※小さな端末ではhtml順のままで表示されます。</p>
+	<p>image-02の方は、<span class="color-check">grid-column: 1 / 10;</span>とあるので、1番目〜10番目のラインの間のマスを占める指定になります。<br>
+	text-02の方は、<span class="color-check">grid-column: 2 / 10;</span>となっています。テキストを1番目から開始すると左側の余白がなくなってキツキツなのであえて2番目からにしています。</p>
+	</div>
+
+</article>
+
+<article class="reverse">
+
+	<div class="image image-02 up">
+	<img src="images/sample5.jpg" alt="">
+	</div>
+
+	<div class="text text-02 up">
+	<h4>reverse</h4>
+	<p>外側のarticleに<span class="color-check">class=&quot;reverse&quot;</span>を追加すると、このように配置が逆になります。<br>
+	※小さな端末ではhtml順のままで表示されます。</p>
+	<p>こちらは上と異なり、左側に余裕があるので、テキストの開始地点を画像の左端とあわせています。</p>
+	</div>
+
+</article>
+
+<article>
+
+	<div class="image image-wide up">
+	<img src="images/mainimg.jpg" alt="">
+	</div>
+
+	<div class="text up">
+	<h4>↑ image-wide</h4>
+	<p>画像ブロックにimage-wideを指定した例です。<br>
+	<span class="color-check">grid-column: 2 / 12;</span></p>
+	</div>
+
+</article>
+
+<article>
+
+	<div class="image up">
+	<img src="images/sample6.jpg" alt="">
+	</div>
+
+	<div class="text up">
+	<h4>↑ 何も指定しない場合</h4>
+	<p>幅いっぱいまで広がります。<br>
+	imageとtextのデフォルトが適用されます。<br>
+	imageの方は、<span class="color-check">grid-column: 1 / -1;</span>です。「-1」というのは一番右端のラインという意味で、今回の場合は「13」と同じです。<br>
+	textの方は、<span class="color-check">grid-column: 2 / 12;</span>です。</p>
+	<p>補足ですが、imageやupやtextといったclassは全パターンでそのまま残しておいて下さい。upは下からフェードインしてくるアニメーションなので、効果が不要なら外しても構いません。</p>
+	</div>
+
+</article>
+
+</div>
+<!--/.grid-box-->
+
+</section>
+
+</main>
+
+<footer>
+
+<div class="footer1">
+
+<p class="logo"><img src="images/logo.png" alt="SAMPLE COMPANY"></p>
+
+<p>〒000-0000 東京足立区XXXXXX1丁目1号<br>
+Tel：000-0000-0000<br>
+受付時間：月曜日から金曜日の8時から18時まで</p>
+
+</div>
+<!--/.footer1-->
+
+<div class="footer2">
+
+<h3>アクセス</h3>
+<p><a href="https://template-party.com/file/pickup_googlemap.html">GoogleMapの地図を変更する方法はマニュアルをご覧下さい。</a></p>
+<div class="iframe-box1">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.0448418561778!2d139.74267721573196!3d35.675897837870934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b89b2e1c8b1%3A0x59a123e3d5ac5ab6!2z44CSMTAwLTAwMTQg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy65rC455Sw55S677yR5LiB55uu77yX4oiS77yR!5e0!3m2!1sja!2sjp!4v1545036128899" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+<small>Copyright© あなたのサイト名 All Rights Reserved.</small>
+
+</div>
+<!--/.footer2-->
+
+</footer>
+
+<ul class="icons">
+<li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+<li><a href="#"><i class="fab fa-line"></i></a></li>
+<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+</ul>
+
+<!--以下の行はテンプレートの著作。削除しないで下さい。-->
+<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+
+</div>
+<!--/#container-->
+
+<!--ページの上部へ戻るボタン-->
+<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+
+<!--開閉ボタン（ハンバーガーアイコン）-->
+<div id="menubar_hdr">
+<span></span><span></span><span></span>
+</div>
+
+<!--jQueryの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--パララックス（inview）-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+<script src="js/jquery.inview_set.js"></script>
+
+<!--このテンプレート専用のスクリプト-->
+<script src="js/main.js"></script>
+
+</body>
+</html>
