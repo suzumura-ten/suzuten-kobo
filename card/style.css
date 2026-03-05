@@ -174,3 +174,17 @@ linear-gradient(#888,#888) right center/1px 60px no-repeat;
 pointer-events:none;
 
 }
+
+/* ======================== */
+/* PCでは名刺を少し大きく */
+/* ======================== */
+
+@media (min-width: 900px){
+
+.card{
+
+width:520px;
+
+}
+
+}
