@@ -1,0 +1,176 @@
+body{
+
+margin:0;
+background:#e6e6e6;
+
+font-family:sans-serif;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+min-height:100vh;
+
+}
+
+/* 上下余白 */
+
+.stage{
+
+padding:80px 20px;
+
+}
+
+/* 名刺 */
+
+.card{
+
+width:380px;
+aspect-ratio:55/91;
+
+background:white;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+position:relative;
+
+padding:40px;
+
+}
+
+/* ---------- 箔押し風ロゴ ---------- */
+
+.logo{
+
+width:140px;
+
+margin-bottom:25px;
+
+filter:
+brightness(0)
+saturate(100%)
+invert(69%)
+sepia(46%)
+saturate(683%)
+hue-rotate(9deg)
+brightness(95%)
+contrast(92%);
+
+}
+
+/* ---------- 名前 ---------- */
+
+.name{
+
+font-size:22px;
+margin:0;
+
+}
+
+.name span{
+
+display:block;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+margin-top:4px;
+
+}
+
+/* ---------- 職種 ---------- */
+
+.role{
+
+font-size:11px;
+letter-spacing:2px;
+
+margin:12px 0 30px 0;
+
+}
+
+/* ---------- リンク ---------- */
+
+.links{
+
+display:flex;
+flex-direction:column;
+gap:10px;
+
+}
+
+.links a{
+
+text-decoration:none;
+
+color:#333;
+
+font-size:14px;
+
+border-bottom:1px solid #ccc;
+
+padding:4px 0;
+
+width:180px;
+
+margin:auto;
+
+}
+
+.links a:hover{
+
+opacity:0.6;
+
+}
+
+/* ======================== */
+/* トンボ */
+/* ======================== */
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+inset:-40px;
+
+background:
+
+/* 左上 */
+linear-gradient(#888,#888) left top/40px 1px no-repeat,
+linear-gradient(#888,#888) left top/1px 40px no-repeat,
+
+/* 右上 */
+linear-gradient(#888,#888) right top/40px 1px no-repeat,
+linear-gradient(#888,#888) right top/1px 40px no-repeat,
+
+/* 左下 */
+linear-gradient(#888,#888) left bottom/40px 1px no-repeat,
+linear-gradient(#888,#888) left bottom/1px 40px no-repeat,
+
+/* 右下 */
+linear-gradient(#888,#888) right bottom/40px 1px no-repeat,
+linear-gradient(#888,#888) right bottom/1px 40px no-repeat,
+
+/* 上中央 */
+linear-gradient(#888,#888) center top/60px 1px no-repeat,
+
+/* 下中央 */
+linear-gradient(#888,#888) center bottom/60px 1px no-repeat,
+
+/* 左中央 */
+linear-gradient(#888,#888) left center/1px 60px no-repeat,
+
+/* 右中央 */
+linear-gradient(#888,#888) right center/1px 60px no-repeat;
+
+pointer-events:none;
+
+}
