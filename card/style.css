@@ -1,11 +1,11 @@
-/* ======================== */
+/* ===================== */
 /* ページ */
-/* ======================== */
+/* ===================== */
 
 body{
 
 margin:0;
-background:#e6e6e6;
+background:#e8e8e8;
 
 font-family:sans-serif;
 
@@ -21,36 +21,40 @@ min-height:100vh;
 padding:80px 20px;
 }
 
-/* ======================== */
+/* ===================== */
 /* 名刺 */
-/* ======================== */
+/* ===================== */
 
 .card{
 
 width:380px;
-aspect-ratio:55/91;
+aspect-ratio:91/55;
 
 background:white;
 
 display:flex;
 flex-direction:column;
 
-align-items:center;
 justify-content:center;
+align-items:center;
 
 text-align:center;
 
-position:relative;
+gap:18px;
 
 padding:40px 30px;
 
-gap:18px;
+position:relative;
 
-box-shadow:0 15px 35px rgba(0,0,0,0.15);
+/* 名刺影 */
+
+box-shadow:
+0 12px 28px rgba(0,0,0,0.15),
+0 40px 70px rgba(0,0,0,0.08);
 
 }
 
-/* PCでは少し拡大 */
+/* PC拡大 */
 
 @media (min-width:900px){
 
@@ -60,103 +64,48 @@ width:520px;
 
 }
 
-/* ======================== */
+/* ===================== */
 /* ロゴ */
-/* ======================== */
+/* ===================== */
 
 .logo{
 
 width:200px;
-height:80px;
 
-position:relative;
+/* 余白補正 */
 
-/* PNGをマスクにする */
-
--webkit-mask-image:url("card/logo.png");
--webkit-mask-repeat:no-repeat;
--webkit-mask-position:center;
--webkit-mask-size:contain;
-
-mask-image:url("card/logo.png");
-mask-repeat:no-repeat;
-mask-position:center;
-mask-size:contain;
-
-/* 箔ベース */
-
-background:linear-gradient(
-120deg,
-#d6b25e 0%,
-#f3e2a2 20%,
-#b8963d 40%,
-#fff1b8 60%,
-#a8842f 80%,
-#f0da8c 100%
-);
-
-overflow:hidden;
+margin-bottom:-4px;
 
 }
 
-/* 光（ほんのり色変化） */
+.logo img{
 
-.logo::after{
+width:100%;
+display:block;
 
-content:"";
+/* 金属箔風 */
 
-position:absolute;
-
-top:-30%;
-left:-60%;
-
-width:50%;
-height:160%;
-
-background:linear-gradient(
-120deg,
-transparent,
-rgba(255,255,255,0.35),
-rgba(255,230,140,0.4),
-transparent
-);
-
-transform:skewX(-20deg);
-
-animation:foilshine 6s ease-in-out infinite;
+filter:
+brightness(0)
+saturate(100%)
+invert(78%)
+sepia(68%)
+saturate(420%)
+hue-rotate(6deg)
+brightness(104%)
+contrast(95%);
 
 }
 
-@keyframes foilshine{
-
-0%{
-left:-60%;
-opacity:0;
-}
-
-20%{
-opacity:0.5;
-}
-
-60%{
-opacity:0.5;
-}
-
-100%{
-left:130%;
-opacity:0;
-}
-
-}
-
-/* ======================== */
+/* ===================== */
 /* 名前 */
-/* ======================== */
+/* ===================== */
 
 .name{
 
-font-size:26px;
 margin:0;
+font-size:26px;
+letter-spacing:1px;
 
 }
 
@@ -164,30 +113,31 @@ margin:0;
 
 display:block;
 
-font-size:15px;
-
-letter-spacing:2px;
+font-size:14px;
+letter-spacing:3px;
 
 margin-top:2px;
 
 }
 
-/* ======================== */
+/* ===================== */
 /* 肩書 */
-/* ======================== */
+/* ===================== */
 
 .role{
+
+margin:0;
 
 font-size:11px;
 letter-spacing:2px;
 
-margin:0;
+color:#444;
 
 }
 
-/* ======================== */
+/* ===================== */
 /* リンク */
-/* ======================== */
+/* ===================== */
 
 .links{
 
@@ -224,9 +174,9 @@ transition:0.2s;
 opacity:0.6;
 }
 
-/* ======================== */
+/* ===================== */
 /* トンボ */
-/* ======================== */
+/* ===================== */
 
 .card::before{
 
