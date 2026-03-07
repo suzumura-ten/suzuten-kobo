@@ -27,30 +27,26 @@ padding:80px 20px;
 
 .card{
 
-width:380px;
+width:420px;
 aspect-ratio:91/55;
 
 background:white;
 
 display:flex;
-flex-direction:column;
-
-justify-content:center;
 align-items:center;
+justify-content:center;
 
-text-align:center;
+gap:40px;
 
-gap:18px;
-
-padding:40px 30px;
+padding:30px 40px;
 
 position:relative;
 
 /* 名刺影 */
 
 box-shadow:
-0 12px 28px rgba(0,0,0,0.15),
-0 40px 70px rgba(0,0,0,0.08);
+0 12px 25px rgba(0,0,0,0.15),
+0 40px 60px rgba(0,0,0,0.08);
 
 }
 
@@ -59,7 +55,7 @@ box-shadow:
 @media (min-width:900px){
 
 .card{
-width:520px;
+width:600px;
 }
 
 }
@@ -70,11 +66,8 @@ width:520px;
 
 .logo{
 
-width:200px;
-
-/* 余白補正 */
-
-margin-bottom:-4px;
+width:140px;
+flex-shrink:0;
 
 }
 
@@ -98,14 +91,23 @@ contrast(95%);
 }
 
 /* ===================== */
-/* 名前 */
+/* 右側情報 */
 /* ===================== */
+
+.info{
+
+display:flex;
+flex-direction:column;
+gap:8px;
+
+}
+
+/* 名前 */
 
 .name{
 
 margin:0;
-font-size:26px;
-letter-spacing:1px;
+font-size:24px;
 
 }
 
@@ -113,16 +115,12 @@ letter-spacing:1px;
 
 display:block;
 
-font-size:14px;
+font-size:13px;
 letter-spacing:3px;
-
-margin-top:2px;
 
 }
 
-/* ===================== */
 /* 肩書 */
-/* ===================== */
 
 .role{
 
@@ -135,18 +133,15 @@ color:#444;
 
 }
 
-/* ===================== */
 /* リンク */
-/* ===================== */
 
 .links{
 
 display:flex;
 flex-direction:column;
+gap:4px;
 
-gap:8px;
-
-margin-top:10px;
+margin-top:8px;
 
 }
 
@@ -156,22 +151,14 @@ text-decoration:none;
 
 color:#333;
 
-font-size:14px;
+font-size:13px;
 
 border-bottom:1px solid #ccc;
 
-padding:4px 0;
+width:150px;
 
-width:180px;
+padding:3px 0;
 
-margin:auto;
-
-transition:0.2s;
-
-}
-
-.links a:hover{
-opacity:0.6;
 }
 
 /* ===================== */
@@ -198,13 +185,7 @@ linear-gradient(#888,#888) left bottom/40px 1px no-repeat,
 linear-gradient(#888,#888) left bottom/1px 40px no-repeat,
 
 linear-gradient(#888,#888) right bottom/40px 1px no-repeat,
-linear-gradient(#888,#888) right bottom/1px 40px no-repeat,
-
-linear-gradient(#888,#888) center top/60px 1px no-repeat,
-linear-gradient(#888,#888) center bottom/60px 1px no-repeat,
-
-linear-gradient(#888,#888) left center/1px 60px no-repeat,
-linear-gradient(#888,#888) right center/1px 60px no-repeat;
+linear-gradient(#888,#888) right bottom/1px 40px no-repeat;
 
 pointer-events:none;
 
