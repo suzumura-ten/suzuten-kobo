@@ -67,52 +67,35 @@ width:520px;
 .logo{
 
 width:200px;
-margin-bottom:-6px;
+height:80px;
 
 position:relative;
-overflow:hidden;
 
-}
+/* PNGをマスクにする */
 
-/* 金属箔ベース */
+-webkit-mask-image:url("../img/logo.png");
+-webkit-mask-repeat:no-repeat;
+-webkit-mask-position:center;
+-webkit-mask-size:contain;
 
-.logo img{
+mask-image:url("../img/logo.png");
+mask-repeat:no-repeat;
+mask-position:center;
+mask-size:contain;
 
-width:100%;
-
-filter:
-brightness(0)
-saturate(100%)
-invert(78%)
-sepia(65%)
-saturate(520%)
-hue-rotate(6deg)
-brightness(102%)
-contrast(96%);
-
-}
-
-/* 箔の微妙な明暗 */
-
-.logo::before{
-
-content:"";
-
-position:absolute;
-inset:0;
+/* 箔ベース */
 
 background:linear-gradient(
-110deg,
-rgba(255,215,120,0.25) 0%,
-rgba(180,130,30,0.35) 30%,
-rgba(255,220,130,0.25) 55%,
-rgba(150,110,25,0.35) 80%,
-rgba(255,215,120,0.25) 100%
+120deg,
+#d6b25e 0%,
+#f3e2a2 20%,
+#b8963d 40%,
+#fff1b8 60%,
+#a8842f 80%,
+#f0da8c 100%
 );
 
-mix-blend-mode:overlay;
-
-pointer-events:none;
+overflow:hidden;
 
 }
 
@@ -124,44 +107,43 @@ content:"";
 
 position:absolute;
 
-top:-10%;
-left:-70%;
+top:-30%;
+left:-60%;
 
-width:40%;
-height:120%;
+width:50%;
+height:160%;
 
 background:linear-gradient(
 120deg,
 transparent,
-rgba(255,220,120,0.25),
+rgba(255,255,255,0.35),
+rgba(255,230,140,0.4),
 transparent
 );
 
 transform:skewX(-20deg);
 
-animation:foilshine 7s ease-in-out infinite;
-
-pointer-events:none;
+animation:foilshine 6s ease-in-out infinite;
 
 }
 
 @keyframes foilshine{
 
 0%{
-left:-70%;
+left:-60%;
 opacity:0;
 }
 
 20%{
-opacity:0.4;
+opacity:0.5;
 }
 
 60%{
-opacity:0.4;
+opacity:0.5;
 }
 
 100%{
-left:140%;
+left:130%;
 opacity:0;
 }
 
