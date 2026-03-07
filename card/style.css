@@ -50,7 +50,7 @@ box-shadow:0 15px 35px rgba(0,0,0,0.15);
 
 }
 
-/* PC拡大 */
+/* PCでは少し拡大 */
 
 @media (min-width:900px){
 
@@ -73,7 +73,7 @@ position:relative;
 
 }
 
-/* 金属箔カラー */
+/* 金属箔ベース */
 
 .logo img{
 
@@ -82,16 +82,40 @@ width:100%;
 filter:
 brightness(0)
 saturate(100%)
-invert(73%)
-sepia(80%)
-saturate(600%)
-hue-rotate(10deg)
-brightness(105%)
-contrast(95%);
+invert(78%)
+sepia(65%)
+saturate(520%)
+hue-rotate(6deg)
+brightness(102%)
+contrast(96%);
 
 }
 
-/* 箔押し光 */
+/* 箔の微妙な明暗 */
+
+.logo::before{
+
+content:"";
+
+position:absolute;
+inset:0;
+
+background:linear-gradient(
+110deg,
+rgba(255,215,120,0.25) 0%,
+rgba(180,130,30,0.35) 30%,
+rgba(255,220,130,0.25) 55%,
+rgba(150,110,25,0.35) 80%,
+rgba(255,215,120,0.25) 100%
+);
+
+mix-blend-mode:overlay;
+
+pointer-events:none;
+
+}
+
+/* 光（ほんのり色変化） */
 
 .logo::after{
 
@@ -100,7 +124,7 @@ content:"";
 position:absolute;
 
 top:-10%;
-left:-60%;
+left:-70%;
 
 width:40%;
 height:120%;
@@ -108,26 +132,36 @@ height:120%;
 background:linear-gradient(
 120deg,
 transparent,
-rgba(255,255,255,0.9),
+rgba(255,220,120,0.25),
 transparent
 );
 
 transform:skewX(-20deg);
 
-animation:shine 5s infinite;
+animation:foilshine 7s ease-in-out infinite;
+
+pointer-events:none;
 
 }
 
-/* 光アニメーション */
-
-@keyframes shine{
+@keyframes foilshine{
 
 0%{
-left:-60%;
+left:-70%;
+opacity:0;
+}
+
+20%{
+opacity:0.4;
+}
+
+60%{
+opacity:0.4;
 }
 
 100%{
-left:130%;
+left:140%;
+opacity:0;
 }
 
 }
