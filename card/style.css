@@ -73,12 +73,12 @@ position:relative;
 
 /* PNGをマスクにする */
 
--webkit-mask-image:url("../img/logo.png");
+-webkit-mask-image:url("card/logo.png");
 -webkit-mask-repeat:no-repeat;
 -webkit-mask-position:center;
 -webkit-mask-size:contain;
 
-mask-image:url("../img/logo.png");
+mask-image:url("card/logo.png");
 mask-repeat:no-repeat;
 mask-position:center;
 mask-size:contain;
