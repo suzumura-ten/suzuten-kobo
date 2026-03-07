@@ -39,50 +39,32 @@ text-align:center;
 
 position:relative;
 
-/* 上だけ広く */
-padding:50px 30px 30px;
+padding:40px 30px;
+
+/* 追加 */
+gap:18px;
 
 }
 
 /* ---------- 箔押し風ロゴ ---------- */
 
 .logo{
-
-width:180px;
-
-margin-bottom:25px;
-
-filter:
-brightness(0)
-saturate(100%)
-invert(69%)
-sepia(46%)
-saturate(683%)
-hue-rotate(9deg)
-brightness(95%)
-contrast(92%);
-
+width:190px;
+margin-bottom:0;
 }
 
 /* ---------- 名前 ---------- */
 
 .name{
-
 font-size:26px;
 margin:0;
-
 }
 
 .name span{
-
 display:block;
-
 font-size:15px;
-
 letter-spacing:2px;
-
-margin-top:4px;
-
+margin-top:2px;
 }
 
 /* ---------- 職種 ---------- */
@@ -92,7 +74,8 @@ margin-top:4px;
 font-size:11px;
 letter-spacing:2px;
 
-margin:12px 0 30px 0;
+/* 余白削除 */
+margin:0;
 
 }
 
@@ -102,7 +85,10 @@ margin:12px 0 30px 0;
 
 display:flex;
 flex-direction:column;
+
 gap:8px;
+
+margin-top:10px;
 
 }
 
