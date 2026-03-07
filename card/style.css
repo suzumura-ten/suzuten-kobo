@@ -1,3 +1,7 @@
+/* ======================== */
+/* ページ全体 */
+/* ======================== */
+
 body{
 
 margin:0;
@@ -16,12 +20,12 @@ min-height:100vh;
 /* 上下余白 */
 
 .stage{
-
 padding:80px 20px;
-
 }
 
+/* ======================== */
 /* 名刺 */
+/* ======================== */
 
 .card{
 
@@ -32,6 +36,7 @@ background:white;
 
 display:flex;
 flex-direction:column;
+
 align-items:center;
 justify-content:center;
 
@@ -41,45 +46,135 @@ position:relative;
 
 padding:40px 30px;
 
-/* 追加 */
+/* 縦距離を均等化 */
 gap:18px;
 
+/* 名刺っぽい影 */
+
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+
 }
 
-/* ---------- 箔押し風ロゴ ---------- */
+/* ======================== */
+/* PCでは少し大きく */
+/* ======================== */
+
+@media (min-width:900px){
+
+.card{
+width:520px;
+}
+
+}
+
+/* ======================== */
+/* ロゴ */
+/* ======================== */
 
 .logo{
-width:190px;
-margin-bottom:0;
+
+width:200px;
+
+/* ロゴ画像余白補正 */
+margin-bottom:-6px;
+
+position:relative;
+
+/* 金属箔カラー */
+
+filter:
+brightness(0)
+saturate(100%)
+invert(72%)
+sepia(60%)
+saturate(550%)
+hue-rotate(8deg)
+brightness(105%)
+contrast(95%);
+
 }
 
-/* ---------- 名前 ---------- */
+/* 箔押し光エフェクト */
+
+.logo::after{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:-70%;
+
+width:50%;
+height:100%;
+
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.9),
+transparent
+);
+
+transform:skewX(-20deg);
+
+animation:foilShine 6s infinite;
+
+pointer-events:none;
+
+}
+
+@keyframes foilShine{
+
+0%{
+left:-70%;
+}
+
+100%{
+left:140%;
+}
+
+}
+
+/* ======================== */
+/* 名前 */
+/* ======================== */
 
 .name{
+
 font-size:26px;
 margin:0;
+
 }
 
 .name span{
+
 display:block;
+
 font-size:15px;
+
 letter-spacing:2px;
+
 margin-top:2px;
+
 }
 
-/* ---------- 職種 ---------- */
+/* ======================== */
+/* 肩書 */
+/* ======================== */
 
 .role{
 
 font-size:11px;
+
 letter-spacing:2px;
 
-/* 余白削除 */
 margin:0;
 
 }
 
-/* ---------- リンク ---------- */
+/* ======================== */
+/* リンク */
+/* ======================== */
 
 .links{
 
@@ -108,12 +203,12 @@ width:180px;
 
 margin:auto;
 
+transition:0.2s;
+
 }
 
 .links a:hover{
-
 opacity:0.6;
-
 }
 
 /* ======================== */
@@ -159,29 +254,5 @@ linear-gradient(#888,#888) left center/1px 60px no-repeat,
 linear-gradient(#888,#888) right center/1px 60px no-repeat;
 
 pointer-events:none;
-
-}
-
-/* ======================== */
-/* PCでは名刺を少し大きく */
-/* ======================== */
-
-@media (min-width: 900px){
-
-.card{
-
-width:520px;
-
-}
-
-}
-
-/* ======================== */
-/* ドロップシャドウ追加 */
-/* ======================== */
-
-.card{
-
-box-shadow:0 10px 30px rgba(0,0,0,0.15);
 
 }
