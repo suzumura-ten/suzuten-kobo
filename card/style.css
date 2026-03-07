@@ -1,11 +1,11 @@
-/* ===================== */
-/* ページ */
-/* ===================== */
+/* ======================== */
+/* ページ全体 */
+/* ======================== */
 
 body{
 
 margin:0;
-background:#e8e8e8;
+background:#e6e6e6;
 
 font-family:sans-serif;
 
@@ -17,97 +17,92 @@ min-height:100vh;
 
 }
 
+/* 上下余白 */
+
 .stage{
 padding:80px 20px;
 }
 
-/* ===================== */
+/* ======================== */
 /* 名刺 */
-/* ===================== */
+/* ======================== */
 
 .card{
 
-width:420px;
-aspect-ratio:91/55;
+width:380px;
+aspect-ratio:55/91;
 
 background:white;
 
 display:flex;
+flex-direction:column;
+
 align-items:center;
 justify-content:center;
 
-gap:40px;
-
-padding:30px 40px;
+text-align:center;
 
 position:relative;
 
-/* 名刺影 */
+padding:40px 30px;
 
-box-shadow:
-0 12px 25px rgba(0,0,0,0.15),
-0 40px 60px rgba(0,0,0,0.08);
+/* 縦距離を均等化 */
+gap:18px;
+
+/* 名刺っぽい影 */
+
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
 
 }
 
-/* PC拡大 */
+/* ======================== */
+/* PCでは少し大きく */
+/* ======================== */
 
 @media (min-width:900px){
 
 .card{
-width:600px;
+width:520px;
 }
 
 }
 
-/* ===================== */
+/* ======================== */
 /* ロゴ */
-/* ===================== */
+/* ======================== */
 
 .logo{
 
-width:140px;
-flex-shrink:0;
+width:200px;
 
-}
+/* ロゴ画像余白補正 */
+margin-bottom:-6px;
 
-.logo img{
+position:relative;
 
-width:100%;
-display:block;
-
-/* 金属箔風 */
+/* 金属箔カラー */
 
 filter:
 brightness(0)
 saturate(100%)
-invert(78%)
-sepia(68%)
-saturate(420%)
-hue-rotate(6deg)
-brightness(104%)
+invert(72%)
+sepia(60%)
+saturate(550%)
+hue-rotate(8deg)
+brightness(105%)
 contrast(95%);
 
 }
 
-/* ===================== */
-/* 右側情報 */
-/* ===================== */
 
-.info{
-
-display:flex;
-flex-direction:column;
-gap:8px;
-
-}
-
+/* ======================== */
 /* 名前 */
+/* ======================== */
 
 .name{
 
+font-size:26px;
 margin:0;
-font-size:24px;
 
 }
 
@@ -115,33 +110,40 @@ font-size:24px;
 
 display:block;
 
-font-size:13px;
-letter-spacing:3px;
+font-size:15px;
+
+letter-spacing:2px;
+
+margin-top:2px;
 
 }
 
+/* ======================== */
 /* 肩書 */
+/* ======================== */
 
 .role{
 
-margin:0;
-
 font-size:11px;
+
 letter-spacing:2px;
 
-color:#444;
+margin:0;
 
 }
 
+/* ======================== */
 /* リンク */
+/* ======================== */
 
 .links{
 
 display:flex;
 flex-direction:column;
-gap:4px;
 
-margin-top:8px;
+gap:8px;
+
+margin-top:10px;
 
 }
 
@@ -151,19 +153,27 @@ text-decoration:none;
 
 color:#333;
 
-font-size:13px;
+font-size:14px;
 
 border-bottom:1px solid #ccc;
 
-width:150px;
+padding:4px 0;
 
-padding:3px 0;
+width:180px;
+
+margin:auto;
+
+transition:0.2s;
 
 }
 
-/* ===================== */
+.links a:hover{
+opacity:0.6;
+}
+
+/* ======================== */
 /* トンボ */
-/* ===================== */
+/* ======================== */
 
 .card::before{
 
@@ -175,18 +185,58 @@ inset:-40px;
 
 background:
 
+/* 左上 */
 linear-gradient(#888,#888) left top/40px 1px no-repeat,
 linear-gradient(#888,#888) left top/1px 40px no-repeat,
 
+/* 右上 */
 linear-gradient(#888,#888) right top/40px 1px no-repeat,
 linear-gradient(#888,#888) right top/1px 40px no-repeat,
 
+/* 左下 */
 linear-gradient(#888,#888) left bottom/40px 1px no-repeat,
 linear-gradient(#888,#888) left bottom/1px 40px no-repeat,
 
+/* 右下 */
 linear-gradient(#888,#888) right bottom/40px 1px no-repeat,
-linear-gradient(#888,#888) right bottom/1px 40px no-repeat;
+linear-gradient(#888,#888) right bottom/1px 40px no-repeat,
+
+/* 上中央 */
+linear-gradient(#888,#888) center top/60px 1px no-repeat,
+
+/* 下中央 */
+linear-gradient(#888,#888) center bottom/60px 1px no-repeat,
+
+/* 左中央 */
+linear-gradient(#888,#888) left center/1px 60px no-repeat,
+
+/* 右中央 */
+linear-gradient(#888,#888) right center/1px 60px no-repeat;
 
 pointer-events:none;
+
+}
+
+/* ======================== */
+/* PCでは名刺を少し大きく */
+/* ======================== */
+
+@media (min-width: 900px){
+
+.card{
+
+width:520px;
+
+}
+
+/* ======================== */
+/* ドロップシャドウ */
+/* ======================== */
+
+}
+
+.card{
+
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
 
 }
