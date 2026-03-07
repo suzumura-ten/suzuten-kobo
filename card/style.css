@@ -74,26 +74,28 @@ width:520px;
 .logo{
 
 width:200px;
+flex-shrink:0;
 
-/* ロゴ画像余白補正 */
-margin-bottom:-6px;
+}
 
-position:relative;
+.logo img{
 
-/* 金属箔カラー */
+width:100%;
+display:block;
+
+/* 金属箔風 */
 
 filter:
 brightness(0)
 saturate(100%)
-invert(72%)
-sepia(60%)
-saturate(550%)
-hue-rotate(8deg)
-brightness(105%)
+invert(78%)
+sepia(68%)
+saturate(420%)
+hue-rotate(6deg)
+brightness(104%)
 contrast(95%);
 
 }
-
 
 /* ======================== */
 /* 名前 */
