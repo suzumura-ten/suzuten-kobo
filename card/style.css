@@ -242,3 +242,30 @@ width:520px;
 box-shadow:0 10px 30px rgba(0,0,0,0.15);
 
 }
+
+/* ===================== */
+/* スマホ中央配置 */
+/* ===================== */
+
+@media (max-width: 768px){
+
+body{
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+min-height:100vh;
+
+padding:20px;
+
+}
+
+.stage{
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+}
